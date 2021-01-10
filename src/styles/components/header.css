@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
+
+header {
+  width: 100%;
+  height: 45px;
+  background: #583d72;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.Header__Container {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+}
+
+.Header__Container:hover {
+  cursor: pointer;
+}
+
+.Header__Container h1 {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.Header__Container img {
+  width: 25px;
+}
+@media screen and (max-width: 767px) {
+  .Header__NavBar {
+    position: absolute;
+    top: 45px;
+    right: -98%;
+    width: 80%;
+    height: 250px;
+    background: #3c1a5c;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 20px;
+    transition: 0.8s;
+  }
+
+  .Header__NavBar a {
+    /* background: red; */
+    padding: 10px 30px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+  .Header__NavBar a:hover {
+    background: #a685e2;
+  }
+
+  .NavBar__Active {
+    top: 45px;
+    right: 0;
+  }
+
+  .Header__Menu {
+    background-image: url("../../images/menu.svg");
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    transition: 0s 0.1s;
+  }
+
+  .Header__Menu--close {
+    background-image: url("../../images/close.svg");
+    width: 20px;
+    height: 20px;
+  }
+
+  /* .Header__Menu img {
+    width: 20px;
+    margin-right: 10px;
+  } */
+}
+
+@media screen and (min-width: 768px) {
+  .Header__NavBar {
+    width: 360px;
+    margin-right: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .Header__NavBar a {
+    height: 45px;
+    margin: 0 3px;
+    padding: 0px 10px;
+    color: white;
+    font-size: 15px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Header__NavBar a:hover {
+    cursor: pointer;
+    font-weight: bold;
+    background: #a685e2;
+  }
+
+  .Header__Menu {
+    display: none;
+  }
+}
